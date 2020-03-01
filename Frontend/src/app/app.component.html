@@ -1,0 +1,11 @@
+<chessboard #chessBoard
+    [flipped]="_isBoardFlipped"
+    (squareClicked)="onSquareClicked($event)"
+    (pieceDragEnd)="onPieceDragEnd($event)"
+    (promotedPiece)="onPromotedPiece($event)">
+</chessboard>
+
+<app-game-end #gameEndView
+    [gameEndStatus]="_gameEndStatus"
+    *ngIf="_gameEndStatus != null">
+</app-game-end>

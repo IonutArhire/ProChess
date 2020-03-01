@@ -1,0 +1,18 @@
+<div class="board-container" #boardContainer>
+	<div class="chessboard" #chessboard oncontextmenu="return false;"></div>
+	<app-pawn-promotion	#pawnPromotion
+		[color]="movingPlayerColor"
+		(promotionChosen)="promotionChosen($event)"
+		*ngIf="isPawnPromotion">
+	</app-pawn-promotion>
+</div>
+
+
+
+<!-- <div class="pieces" *ngIf="showEditor">
+	<ng-container *ngFor="let color of ['w', 'b']">
+		<ng-container *ngFor="let piece of PIECES">
+			<img src="{{themeUrl}}{{color}}{{piece}}.png" class="piece spare" alt="{{color}}-{{piece}}" draggable='true' oncontextmenu="return false;"/>
+		</ng-container>
+	</ng-container>
+</div> -->

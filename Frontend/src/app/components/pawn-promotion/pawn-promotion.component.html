@@ -1,0 +1,11 @@
+<div class="promotion-container" #promotionContainer>
+  <div class="promotion-dialog">
+    <ng-container *ngFor="let piece of ['queen', 'rook', 'bishop', 'knight']">
+      <img src="{{themePath}}{{color}}{{piece}}.png" class="piece promote" (click)="selectPromotion(piece)" alt="{{piece}}" oncontextmenu="return false;"/>
+    </ng-container>
+  </div>
+  <!-- <div class="victory-dialog">
+    <ng-content select="[victory]"></ng-content>
+  </div> -->
+
+</div>
